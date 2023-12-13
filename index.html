@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mini SensorLab</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="node_modules/chart.js/dist/chart.js"></script>
+</head>
+<body>
+    <div class="main-wrapper">
+        <div class="container">
+            <div id="img-wrapper">
+                <img src="scientech.jpg" alt="">
+            </div>
+            <div id="wrapper1" class="chart-wrapper">
+                <canvas id="chart1"></canvas>
+            </div>
+            <div id="wrapper2" class="chart-wrapper">
+                <canvas id="chart2"></canvas>
+            </div>
+            <div id="wrapper3" class="chart-wrapper">
+                <canvas id="chart3"></canvas>
+            </div>
+        </div>
+        <div class="right-container">
+            <div class="port-container">
+                <div class="com-port-selector">
+                    <label for="comPorts">Select COM Port:</label>
+                    <select id="comPorts">
+                        <!-- Options will be dynamically added here -->
+                    </select>
+                </div>
+                <button id="button0">Start DAQ</button>
+            </div>
+
+            <div class="controls">
+                <div id="channel1" class="channel">
+                    <div class="channelLabel">Channel 1</div>
+                    <button id="channel1button1" class="button">Button 1</button>
+                    <button id="channel1button2" class="button">Button 2</button>
+                    <button id="channel1button3" class="button">Button 3</button>
+                    <button id="channel1button4" class="button">Button 4</button>
+                    <button id="channel1button5" class="button">Button 5</button>
+                    <button id="channel1button6" class="button">Button 6</button>
+                    <button id="channel1button7" class="button">Button 7</button>
+                    <button id="channel1button8" class="button">Button 8</button>
+                    <button id="channel1button9" class="button">Button 9</button>
+                    <button id="channel1button10" class="button">Button 10</button>
+                </div>
+                <div id="channel2" class="channel">
+                    <div class="channelLabel">Channel 2</div>
+                    <button id="channel2button1" class="button">Button 1</button>
+                    <button id="channel2button2" class="button">Button 2</button>
+                    <button id="channel2button3" class="button">Button 3</button>
+                    <button id="channel2button4" class="button">Button 4</button>
+                    <button id="channel2button5" class="button">Button 5</button>
+                    <button id="channel2button6" class="button">Button 6</button>
+                    <button id="channel2button7" class="button">Button 7</button>
+                    <button id="channel2button8" class="button">Button 8</button>
+                    <button id="channel2button9" class="button">Button 9</button>
+                    <button id="channel2button10" class="button">Button 10</button>
+                </div>
+                <div id="channel3" class="channel">
+                    <div class="channelLabel">Channel 3</div>
+                    <button id="channel3button1" class="button">Button 1</button>
+                    <button id="channel3button2" class="button">Button 2</button>
+                    <button id="channel3button3" class="button">Button 3</button>
+                    <button id="channel3button4" class="button">Button 4</button>
+                    <button id="channel3button5" class="button">Button 5</button>
+                    <button id="channel3button6" class="button">Button 6</button>
+                    <button id="channel3button7" class="button">Button 7</button>
+                    <button id="channel3button8" class="button">Button 8</button>
+                    <button id="channel3button9" class="button">Button 9</button>
+                    <button id="channel3button10" class="button">Button 10</button>
+                </div>
+            </div>
+            <button id="downloadButton">Download Data(CSV)</button>
+        </div>
+    </div>    
+    <script src="renderer.js"></script>
+</body>
+ 
+</html>

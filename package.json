@@ -1,0 +1,43 @@
+{
+  "name": "minisensorlab",
+  "version": "1.0.0",
+  "description": "Mini SensorLab",
+  "main": "main.js",
+  "author": "Scientech",
+  "license": "ISC",
+  "scripts": {
+    "postinstall": "electron-rebuild",
+    "pack": "electron-builder --dir",
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+  "devDependencies": {
+    "chart.js": "^4.4.0",
+    "electron": "^27.1.2",
+    "electron-builder": "^24.9.1",
+    "electron-packager": "^17.1.2",
+    "electron-rebuild": "^3.2.9",
+    "plotly.js": "^2.0.0",
+    "serialport": "^9.2.8"
+  },
+  "dependencies": {
+    "chart.js": "^4.4.0"
+  },
+  "build": {
+    "appId": "com.scientech.minisensorlab",
+    "productName": "Mini SensorLab",
+    "win": {
+      "target": "msi",
+      "icon": "logo.ico"
+    },
+    "asarUnpack": [
+      "node_modules/serialport/**"
+    ],
+    "npmRebuild": true,
+    "files": [
+      "**/*",
+      "!**/*.map",
+      "node_modules/chart.js/**/*"
+    ]
+  }
+}
