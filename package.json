@@ -1,9 +1,9 @@
 {
-  "name": "minisensorlab",
+  "name": "quanta",
   "version": "1.0.0",
-  "description": "Mini SensorLab",
+  "description": "Quanta",
   "main": "main.js",
-  "author": "Scientech",
+  "author": "NVIS",
   "license": "ISC",
   "scripts": {
     "postinstall": "electron-rebuild",
@@ -24,8 +24,8 @@
     "chart.js": "^4.4.0"
   },
   "build": {
-    "appId": "com.scientech.minisensorlab",
-    "productName": "Mini SensorLab",
+    "appId": "com.scientech.quanta",
+    "productName": "Quanta",
     "win": {
       "target": "msi",
       "icon": "logo.ico"
