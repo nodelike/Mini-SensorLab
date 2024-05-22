@@ -17,27 +17,38 @@
     "electron-builder": "^24.9.1",
     "electron-packager": "^17.1.2",
     "electron-rebuild": "^3.2.9",
-    "plotly.js": "^2.0.0",
     "serialport": "^9.2.8"
   },
   "dependencies": {
-    "chart.js": "^4.4.0"
+    "chart.js": "^4.4.0",
+    "serialport": "^9.2.8"
   },
   "build": {
-    "appId": "com.scientech.quanta",
+    "appId": "com.nvis.quanta",
     "productName": "Quanta",
     "win": {
-      "target": "msi",
+      "target": [
+        {
+          "target": "nsis",
+          "arch": ["x64"]
+        }
+      ],
       "icon": "logo.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "installerIcon": "logo.ico",
+      "uninstallerIcon": "logo.ico",
+      "uninstallDisplayName": "Quanta",
+      "license": "license.md",
+      "allowToChangeInstallationDirectory": true
     },
     "asarUnpack": [
       "node_modules/serialport/**"
     ],
     "npmRebuild": true,
-    "files": [
-      "**/*",
-      "!**/*.map",
-      "node_modules/chart.js/**/*"
-    ]
-  }
+    "files": ["**/*",
+              "!**/*.map",
+              "node_modules/chart.js/**/*"]
+  } 
 }

@@ -129,6 +129,7 @@ function updateContainerWidth() {
 
 
 document.addEventListener('DOMContentLoaded', () => {
+    let selectedPort = null;
     updateContainerWidth();
     ipcRenderer.on('list-ports', (event, ports) => {
         const comPortsSelect = document.getElementById('comPorts');
@@ -139,7 +140,14 @@ document.addEventListener('DOMContentLoaded', () => {
             option.value = port.path;
             option.textContent = port.path;
             comPortsSelect.appendChild(option);
+
+            if (port.path === selectedPort) {
+                option.selected = true;
+            }
         });
+    });
+    document.getElementById('comPorts').addEventListener('change', (event) => {
+        selectedPort = event.target.value;
     });
 
     for (let i = 1; i <= 3; i++) {
